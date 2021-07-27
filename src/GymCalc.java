@@ -51,12 +51,40 @@ public class GymCalc {
 		
 	}
 	
-	public static float determineTotalWeight() {
+	public static double determineTotalWeight() {
 		
+		
+		double eachSide;
+		Scanner scanner = new Scanner(System.in);
+		
+		do {
+		System.out.print("Enter weight on EACH SIDE: ");
+		eachSide = scanner.nextDouble();
+		if(eachSide % 2.5 != 0)
+			System.out.println("ERROR. Invalid input. Weight needs to be divisible by 2.5");
+		
+		}while(eachSide % 2.5 != 0.0);
+		
+		
+		scanner.close();
+		return (eachSide * 2.0) + 45;
 	}
 	
-	public static float determineEachSide() {
+	public static double determineEachSide() {
 		
+		double total;
+		Scanner scanner = new Scanner(System.in);
+		
+		do {
+			System.out.print("Enter weight on EACH SIDE: ");
+			total = scanner.nextDouble();
+			if(total % 5 != 0)
+				System.out.println("ERROR. Invalid input. Total weight needs to be divisible by 5");
+			
+			}while(total % 5.0 != 0.0);
+		
+		scanner.close();
+		return (total - 45) / 2.0;
 	}
 
 }
