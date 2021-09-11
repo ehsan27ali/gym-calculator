@@ -100,6 +100,7 @@ public class GymCalc {
 	public static void determinePlates(double eachSide){
 		
 		int num45s = 0, num25s = 0, num10s = 0, num5s = 0, num2point5s = 0;
+		System.out.println("\nEach side adds up to " + eachSide + "lbs");
 		
 		while(eachSide > 0.0){
 			if(eachSide >= 45.0){
@@ -137,7 +138,7 @@ public class GymCalc {
 		
 		System.out.println();
 		System.out.println("\n*all weights shown are considering a 45lb bar");
-		System.out.print("\n=============================================");
+		System.out.print("=============================================");
 	}
 
 }
